@@ -25,6 +25,7 @@ RUN apk --no-cache add \
         php7-pdo_mysql \
         php7-phar \
         php7-redis \
+        php7-simplexml \
         php7-tokenizer \
         php7-xml \
         php7-xmlreader \
