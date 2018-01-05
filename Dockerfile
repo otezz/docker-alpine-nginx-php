@@ -13,6 +13,7 @@ RUN apk --no-cache add \
         php7-common \
         php7-ctype \
         php7-curl \
+        php7-dev \
         php7-dom \
         php7-fpm \
         php7-gd \
@@ -22,6 +23,7 @@ RUN apk --no-cache add \
         php7-mcrypt \
         php7-mysqli \
         php7-openssl \
+        php7-pear \
         php7-pdo_mysql \
         php7-phar \
         php7-redis \
@@ -31,4 +33,8 @@ RUN apk --no-cache add \
         php7-xmlreader \
         php7-zip \
         php7-zlib \
-        curl nginx supervisor
+        curl nginx openssl supervisor
+
+ # Setup mongodb 
+ADD ./setup-mongodb.sh /setup-mongodb.sh
+RUN sh /setup-mongodb.sh && rm -fr /setup-mongodb.sh
