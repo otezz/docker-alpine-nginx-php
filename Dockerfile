@@ -4,7 +4,8 @@ LABEL maintainer "Seto Kuslaksono <kuslaksono@gmail.com>"
 # Initial Setup
 ENV TIMEZONE Asia/Jakarta
 RUN apk add --no-cache tzdata \
-    && cp /usr/share/zoneinfo/`echo $TIMEZONE` /etc/localtime
+    && cp /usr/share/zoneinfo/`echo $TIMEZONE` /etc/localtime && \
+    apk del tzdata
 
 # Install packages
 RUN apk --no-cache add \
