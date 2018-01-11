@@ -23,6 +23,7 @@ RUN apk --no-cache add \
         php7-mbstring \
         php7-mcrypt \
         php7-mysqli \
+        php7-opcache \
         php7-openssl \
         php7-pear \
         php7-pdo_mysql \
