@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.8
 LABEL maintainer "Seto Kuslaksono <kuslaksono@gmail.com>"
 
 # Initial Setup
@@ -14,7 +14,6 @@ RUN apk --no-cache add \
         php7-common \
         php7-ctype \
         php7-curl \
-        php7-dev \
         php7-dom \
         php7-fpm \
         php7-gd \
@@ -22,6 +21,7 @@ RUN apk --no-cache add \
         php7-json \
         php7-mbstring \
         php7-mcrypt \
+        php7-mongodb \
         php7-mysqli \
         php7-opcache \
         php7-openssl \
@@ -36,7 +36,4 @@ RUN apk --no-cache add \
         php7-zip \
         php7-zlib \
         curl nginx openssl supervisor
-
- # Setup mongodb 
-ADD ./setup-mongodb.sh /setup-mongodb.sh
-RUN sh /setup-mongodb.sh && rm -fr /setup-mongodb.sh
+        
