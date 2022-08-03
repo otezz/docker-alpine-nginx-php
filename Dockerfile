@@ -1,5 +1,5 @@
-FROM alpine:3.7
-LABEL maintainer "Seto Kuslaksono <kuslaksono@gmail.com>"
+FROM alpine:3.15
+LABEL maintainer = "Seto Kuslaksono <kuslaksono@gmail.com>"
 
 # Initial Setup
 ENV TIMEZONE Asia/Jakarta
@@ -37,6 +37,6 @@ RUN apk --no-cache add \
         php7-zlib \
         curl nginx openssl supervisor
 
- # Setup mongodb 
-ADD ./setup-mongodb.sh /setup-mongodb.sh
+ # Setup mongodb
+COPY ./setup-mongodb.sh /setup-mongodb.sh
 RUN sh /setup-mongodb.sh && rm -fr /setup-mongodb.sh
