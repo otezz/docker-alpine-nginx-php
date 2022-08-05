@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:3.12
 LABEL maintainer = "Seto Kuslaksono <kuslaksono@gmail.com>"
 
 # Initial Setup
@@ -27,9 +27,11 @@ RUN apk --no-cache add \
         php7-openssl \
         php7-pear \
         php7-pdo_mysql \
+        php7-pdo_sqlite \
         php7-phar \
         php7-redis \
         php7-simplexml \
+        php7-sqlite3 \
         php7-tokenizer \
         php7-xml \
         php7-xmlreader \
